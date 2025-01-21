@@ -1,16 +1,16 @@
--- Создание таблицы Players
+
 CREATE TABLE "Players" (
     Id SERIAL PRIMARY KEY,
     Name VARCHAR(50) NOT NULL
 );
 
--- Создание таблицы Teams
+
 CREATE TABLE "Teams" (
     Id SERIAL PRIMARY KEY,
     Name VARCHAR(50) NOT null Unique
 );
 
--- Создание таблицы Achievements
+
 CREATE TABLE "Achievements" (
     Id SERIAL PRIMARY KEY,
     AchieveName VARCHAR(50) NOT NULL,
@@ -20,7 +20,7 @@ CREATE TABLE "Achievements" (
     FOREIGN KEY (TeamId) REFERENCES "Teams" (Id) ON DELETE cascade
 );
 
--- Вставка данных в таблицу Players
+
 INSERT INTO "Players" (Name) VALUES 
 ('Stephen Curry'),
 ('Lebron James'),
@@ -30,7 +30,7 @@ INSERT INTO "Players" (Name) VALUES
 ('Dwayne Wade'),
 ('Tim Duncan');
 
--- Вставка данных в таблицу Teams
+
 INSERT INTO "Teams" (Name) VALUES 
 ('Warriors'),
 ('Lakers'),
@@ -40,7 +40,7 @@ INSERT INTO "Teams" (Name) VALUES
 ('Celtics'),
 ('Cavaliers');
 
--- Вставка данных в таблицу Achievements
+
 INSERT INTO "Achievements" (AchieveName, PlayerId, TeamId) VALUES 
 ('MVP 1996', 4, 3),
 ('MVP 2009', 2, 7),
