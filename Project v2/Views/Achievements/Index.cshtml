@@ -1,0 +1,38 @@
+﻿@model IEnumerable<Project_v2.Models.Achievements>
+@{
+    ViewData["Title"] = "Таблица 'Достижения' ";
+}
+
+<h1>Список достижений</h1>
+<br />
+
+<table class="table table-bordered table-hover table-responsive">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Достижение</th>
+            <th scope="col">ID игрока</th>
+            <th scope="col">ID команды</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var achievement in Model)
+        {
+            <tr>
+                <td>@achievement.id</td>
+                <td>@achievement.achievename</td>
+                <td>@achievement.playerid</td>
+                <td>@achievement.teamid</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@achievement.id" class="btn btn-warning btn-sm">Изменить</a>
+                    <a asp-action="Delete" asp-route-id="@achievement.id" class="btn btn-danger btn-sm">Удалить</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<br />
+<a asp-action="Create" class="btn btn-primary">Добавить новое достижение</a>
+<br />
+<br />
+

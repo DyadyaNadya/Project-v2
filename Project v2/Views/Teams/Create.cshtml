@@ -1,0 +1,18 @@
+﻿@model Project_v2.Models.Teams
+
+@{
+    ViewData["Title"] = "Добавить команду";
+}
+
+<h1>Добавить команду</h1>
+
+<form asp-action="Create" method="post">
+    <div class="form-group">
+        <label asp-for="name" class="control-label"></label>
+        <input asp-for="name" class="form-control" />
+        <span asp-validation-for="name" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Добавить</button>
+</form>
+
+<a asp-action="Index" class="btn btn-secondary">Назад к списку</a>

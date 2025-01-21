@@ -1,0 +1,20 @@
+﻿@model Project_v2.Models.Players
+
+@{
+    ViewData["Title"] = "Добавить игрока";
+}
+
+<h1>Добавить игрока</h1>
+
+<form asp-action="Create" method="post">
+    <div class="form-group">
+        <label asp-for="name" class="control-label"></label>
+        <input asp-for="name" class="form-control" />
+        <span asp-validation-for="name" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Добавить</button>
+</form>
+<br />
+<form asp-action="Index" method="get" style="display: inline;">
+    <button type="submit" class="btn btn-secondary">Назад к списку</button>
+</form>

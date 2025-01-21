@@ -1,0 +1,19 @@
+﻿@model Project_v2.Models.Players
+
+@{
+    ViewData["Title"] = "Удалить игрока";
+}
+
+<h1>Удалить игрока</h1>
+
+<h3>Вы уверены, что хотите удалить этого игрока?</h3>
+<div>
+    <h4>@Model.name</h4>
+    <p><strong>ID:</strong> @Model.id</p>
+</div>
+
+<form asp-action="Delete">
+    <input type="hidden" asp-for="id" />
+    <button type="submit" class="btn btn-danger">Удалить</button>
+    <a asp-action="Index" class="btn btn-secondary">Отмена</a>
+</form>

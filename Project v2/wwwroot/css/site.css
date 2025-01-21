@@ -1,0 +1,77 @@
+@font-face {
+    font-family: "Jersey";
+    src: url(/fonts/Jersey15-Regular.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+a{
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+a:hover{
+    color: yellow;
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.logo{
+    font-family: 'Jersey';
+    color: aquamarine;
+    display: flex;
+    padding: 7px 35px 0 20px; 
+    font-size: 35px;
+    padding-top: 7px;
+/*    padding-bottom: auto;*/
+
+}
+
+body{
+    background: linear-gradient(gray, white);
+    background-repeat: no-repeat;
+}
+
+header{
+    background: black;
+    font-family: 'Sans Serif Collection';
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+footer{
+    
+}
+
+form{
+    display: 
+}
+
+table {
+    margin-top: 20px;
+}
+
+th {
+    text-align: center;
+    background-color: #343a40;
+    color: #fff;
+}
+
+td {
+    text-align: center;
+    vertical-align: middle;
+}
+
+tr:hover {
+    background-color: #f8f9fa;
+}

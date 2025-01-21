@@ -1,0 +1,20 @@
+﻿@model Project_v2.Models.Teams
+
+@{
+    ViewData["Title"] = "Редактировать команду";
+}
+
+<h1>Редактировать команду</h1>
+
+<form asp-action="Edit" method="post">
+    <div class="form-group">
+        <label asp-for="name" class="control-label"></label>
+        <input asp-for="name" class="form-control" />
+        <span asp-validation-for="name" class="text-danger"></span>
+    </div>
+
+    <input type="hidden" asp-for="id" /> <!-- Скрытое поле для ID команды -->
+
+    <button type="submit" class="btn btn-primary">Сохранить изменения</button>
+    <a asp-action="Index" class="btn btn-secondary">Отмена</a>
+</form>

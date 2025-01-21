@@ -1,0 +1,33 @@
+﻿@model IEnumerable<Project_v2.Models.Players>
+@{
+	ViewData["Title"] = "Таблица 'Игроки' ";
+}
+
+<h1>Список игроков</h1> <br />
+
+<table class="table table-striped"> 
+     <thead> 
+        <tr> 
+             <th>ID</th> 
+             <th>Name</th> 
+         </tr> 
+     </thead> 
+     <tbody> 
+         @foreach (var player in Model) 
+        { 
+            <tr> 
+                 <td>@player.id</td> 
+                 <td>@player.name</td> 
+                 <td>
+                    <a asp-action="Edit" asp-route-id="@player.id" class="btn btn-warning btn-sm">Изменить</a>
+                    <a asp-action="Delete" asp-route-id="@player.id" class="btn btn-danger btn-sm">Удалить</a>
+                 </td>
+             </tr> 
+         }
+     </tbody> 
+ </table> 
+ <br />
+
+ <a asp-action="Create" class="btn">Добавить нового игрока</a>
+<br />
+<br />

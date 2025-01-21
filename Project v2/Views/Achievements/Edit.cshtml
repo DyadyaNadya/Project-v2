@@ -1,0 +1,32 @@
+﻿@model Project_v2.Models.Achievements
+
+@{
+    ViewData["Title"] = "Редактировать достижение";
+}
+
+<h1>Редактировать достижение</h1>
+
+<form asp-action="Edit" method="post">
+    <div class="form-group">
+        <label asp-for="achievename" class="control-label"></label>
+        <input asp-for="achievename" class="form-control" />
+        <span asp-validation-for="achievename" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="playerid" class="control-label"></label>
+        <input asp-for="playerid" class="form-control" />
+        <span asp-validation-for="playerid" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="teamid" class="control-label"></label>
+        <input asp-for="teamid" class="form-control" />
+        <span asp-validation-for="teamid" class="text-danger"></span>
+    </div>
+
+    <input type="hidden" asp-for="id" /> 
+
+    <button type="submit" class="btn btn-primary">Сохранить изменения</button>
+    <a asp-action="Index" class="btn btn-secondary">Отмена</a>
+</form>

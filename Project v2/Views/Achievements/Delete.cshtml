@@ -1,0 +1,18 @@
+﻿@model Project_v2.Models.Achievements
+
+@{
+    ViewData["Title"] = "Удалить достижение";
+}
+
+<h1>Удалить достижение</h1>
+
+<div>
+    <h3>Вы уверены, что хотите удалить достижение "@Model.achievename"?</h3>
+    <p>Это действие нельзя будет отменить.</p>
+
+    <form asp-action="Delete" method="post">
+        <input type="hidden" asp-for="id" />
+        <button type="submit" class="btn btn-danger">Удалить</button>
+        <a asp-action="Index" class="btn btn-secondary">Отмена</a>
+    </form>
+</div>

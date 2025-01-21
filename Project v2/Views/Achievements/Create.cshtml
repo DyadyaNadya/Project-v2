@@ -1,0 +1,27 @@
+﻿@model Project_v2.Models.Achievements
+
+@{
+    ViewData["Title"] = "Добавить игрока";
+}
+
+<h1>Добавить достижение</h1>
+
+<form asp-action="Create" method="post">
+    <div class="form-group">
+        <label asp-for="achievename" class="control-label"></label>
+        <input asp-for="achievename" class="form-control" />
+        <span asp-validation-for="achievename" class="text-danger"></span>
+        <br />
+        <label asp-for="playerid" class="control-label"></label>
+        <input asp-for="playerid" class="form-control" />
+        <span asp-validation-for="playerid" class="text-danger"></span>
+        <br />
+        <label asp-for="teamid" class="control-label"></label>
+        <input asp-for="teamid" class="form-control" />
+        <span asp-validation-for="teamid" class="text-danger"></span>
+        <br />
+    </div>
+    <button type="submit" class="btn btn-primary">Добавить</button>
+</form>
+
+<a asp-action="Index" class="btn btn-secondary">Назад к списку</a>

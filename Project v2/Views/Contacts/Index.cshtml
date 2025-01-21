@@ -1,0 +1,30 @@
+﻿@model Contact
+@{
+    ViewData["Title"] = "Зачем тут это";
+}
+
+<h1>(А, ну да, это ж страница обратной связи)</h1>
+
+<form method="post" asp-controller="Contacts" asp-action="Check">
+    <label asp-for="name"></label>
+    <input asp-for="name" />
+    <span asp-validation-for="name"></span> <br />
+
+    <label asp-for="surname"></label>
+    <input asp-for="surname" />
+    <span asp-validation-for="surname"></span> <br />
+
+    <label asp-for="age"></label>
+    <input asp-for="age" />
+    <span asp-validation-for="age"></span> <br />
+
+    <label asp-for="email"></label>
+    <input asp-for="email" />
+    <span asp-validation-for="email"></span> <br /> 
+
+    <label asp-for="message"></label>
+    <input asp-for="message" />
+    <span asp-validation-for="message"></span> <br/>
+
+    <input type="submit" value="Отправить"/>
+</form>
